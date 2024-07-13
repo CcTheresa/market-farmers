@@ -15,7 +15,7 @@
                 <a class="animate-top" title="Add To Cart" href="{{route('cart.add', $product->id)}}">
                     <i class="pe-7s-cart"></i>
                 </a>
-                <a class="animate-left" title="Wishlist" href="#">
+                <a class="animate-left" title="Wishlist" href="{{route('wishlist.add', $product->id)}}">
                     <i class="pe-7s-like"></i>
                 </a>
             </div>

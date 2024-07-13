@@ -29,6 +29,13 @@ Route::get('/cart/update/{itemId}', 'CartController@update')->name('cart.update'
 Route::get('/cart/checkout', 'CartController@checkout')->name('cart.checkout')->middleware('auth');
 Route::get('/cart/apply-coupon', 'CartController@applyCoupon')->name('cart.coupon')->middleware('auth');
 
+Route::get('/add-to-wishlist/{product}', 'WishlistController@add')->name('wishlist.add')->middleware('auth');
+Route::get('/wishlist', 'WishlistController@index')->name('wishlist.index')->middleware('auth');
+Route::get('/wishlist/destroy/{itemId}', 'WishlistController@destroy')->name('wishlist.destroy')->middleware('auth');
+Route::get('/wishlist/update/{itemId}', 'WishlistController@update')->name('wishlist.update')->middleware('auth');
+Route::get('/wishlist/checkout', 'WishlistController@checkout')->name('wishlist.checkout')->middleware('auth');
+Route::get('/wishlist/apply-coupon', 'WishlistController@applyCoupon')->name('wishlist.coupon')->middleware('auth');
+
 Route::resource('orders', 'OrderController')->only('store')->middleware('auth');
 
 Route::resource('shops','ShopController')->middleware('auth');

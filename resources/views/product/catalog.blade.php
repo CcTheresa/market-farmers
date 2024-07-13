@@ -8,10 +8,10 @@
     style="background-image: url(/assets/img/bg/breadcrumb.jpg)">
     <div class="container-fluid">
         <div class="breadcrumb-content text-center">
-            <h2> shop grid</h2>
+            <h2> Farm grid</h2>
             <ul>
                 <li><a href="#">home</a></li>
-                <li>shop grid</li>
+                <li>Farm grid</li>
             </ul>
         </div>
     </div>
@@ -49,48 +49,50 @@
                         <h3 class="sidebar-title">Categories</h3>
                         <div class="sidebar-categories">
                             <ul>
-                                <li><a href="#">Accessories <span>4</span></a></li>
-                                <li><a href="#">Book <span>9</span></a></li>
-                                <li><a href="#">Clothing <span>5</span> </a></li>
-                                <li><a href="#">Homelife <span>3</span></a></li>
-                                <li><a href="#">Kids & Baby <span>4</span></a></li>
+                                <li><a href="#">Liveestock <span>4</span></a></li>
+                                <li><a href="#">Fruits <span>9</span></a></li>
+                                <li><a href="#">Vegetables<span>5</span> </a></li>
+                                <li><a href="#">Poultry <span>3</span></a></li>
+                                <li><a href="#">Dairy <span>4</span></a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="sidebar-widget sidebar-overflow mb-45">
-                        <h3 class="sidebar-title">color</h3>
-                        <div class="product-color">
-                            <ul>
-                                <li class="red">b</li>
-                                <li class="pink">p</li>
-                                <li class="blue">b</li>
-                                <li class="sky">b</li>
-                                <li class="green">y</li>
-                                <li class="purple">g</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="sidebar-widget mb-40">
-                        <h3 class="sidebar-title">size</h3>
-                        <div class="product-size">
-                            <ul>
-                                <li><a href="#">xl</a></li>
-                                <li><a href="#">m</a></li>
-                                <li><a href="#">l</a></li>
-                                <li><a href="#">ml</a></li>
-                                <li><a href="#">lm</a></li>
-                            </ul>
-                        </div>
-                    </div>
+    <h3 class="sidebar-title">Attributes</h3>
+    <div class="product-attributes">
+        <ul>
+            <li class="organic">Organic</li>
+            <li class="conventional">Conventional</li>
+            <li class="fresh">Fresh</li>
+            <li class="size">Size/Weight</li>
+            <li class="variety">Variety</li>
+            <!-- Add more attributes as needed -->
+        </ul>
+    </div>
+</div>
+
+<div class="sidebar-widget mb-40">
+    <h3 class="sidebar-title">Season</h3>
+    <div class="product-season">
+        <ul>
+            <li><a href="#">Spring</a></li>
+            <li><a href="#">Summer</a></li>
+            <li><a href="#">Autumn</a></li>
+            <li><a href="#">Winter</a></li>
+            <!-- Add more seasonal options as needed -->
+        </ul>
+    </div>
+</div>
+
                     <div class="sidebar-widget mb-40">
                         <h3 class="sidebar-title">tag</h3>
                         <div class="product-tags">
                             <ul>
-                                <li><a href="#">Clothing</a></li>
-                                <li><a href="#">Bag</a></li>
-                                <li><a href="#">Women</a></li>
-                                <li><a href="#">Tie</a></li>
-                                <li><a href="#">Women</a></li>
+                                <li><a href="#">Vegetables</a></li>
+                                <li><a href="#">Livestock</a></li>
+                                <li><a href="#">Dairy</a></li>
+                                <li><a href="#">Poultry</a></li>
+                                <li><a href="#">Fruits</a></li>
                             </ul>
                         </div>
                     </div>
@@ -103,7 +105,7 @@
                                         <a href="#"><img src="/assets/img/product/sidebar-product/1.jpg" alt=""></a>
                                     </div>
                                     <div class="top-rated-text">
-                                        <h4><a href="#">Flying Drone</a></h4>
+                                        <h4><a href="#">Fresh SukumaWiki</a></h4>
                                         <div class="top-rated-rating">
                                             <ul>
                                                 <li><i class="pe-7s-star"></i></li>
@@ -113,7 +115,7 @@
                                                 <li><i class="pe-7s-star"></i></li>
                                             </ul>
                                         </div>
-                                        <span>$140.00</span>
+                                        <span>kshs 140.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +125,7 @@
                                         <a href="#"><img src="/assets/img/product/sidebar-product/2.jpg" alt=""></a>
                                     </div>
                                     <div class="top-rated-text">
-                                        <h4><a href="#">Flying Drone</a></h4>
+                                        <h4><a href="#">Fresh SukumaWiki</a></h4>
                                         <div class="top-rated-rating">
                                             <ul>
                                                 <li><i class="pe-7s-star"></i></li>
@@ -133,7 +135,7 @@
                                                 <li><i class="pe-7s-star"></i></li>
                                             </ul>
                                         </div>
-                                        <span>$140.00</span>
+                                        <span>kshs 140.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +145,7 @@
                                         <a href="#"><img src="/assets/img/product/sidebar-product/3.jpg" alt=""></a>
                                     </div>
                                     <div class="top-rated-text">
-                                        <h4><a href="#">Flying Drone</a></h4>
+                                        <h4><a href="#">Fresh SukumaWiki</a></h4>
                                         <div class="top-rated-rating">
                                             <ul>
                                                 <li><i class="pe-7s-star"></i></li>
@@ -153,7 +155,7 @@
                                                 <li><i class="pe-7s-star"></i></li>
                                             </ul>
                                         </div>
-                                        <span>$140.00</span>
+                                        <span>kshs 140.00</span>
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +165,7 @@
                                         <a href="#"><img src="/assets/img/product/sidebar-product/4.jpg" alt=""></a>
                                     </div>
                                     <div class="top-rated-text">
-                                        <h4><a href="#">Flying Drone</a></h4>
+                                        <h4><a href="#">Fresh SukumaWiki</a></h4>
                                         <div class="top-rated-rating">
                                             <ul>
                                                 <li><i class="pe-7s-star"></i></li>
@@ -173,7 +175,7 @@
                                                 <li><i class="pe-7s-star"></i></li>
                                             </ul>
                                         </div>
-                                        <span>$140.00</span>
+                                        <span>kshs 140.00</span>
                                     </div>
                                 </div>
                             </div>

@@ -4,7 +4,7 @@
         <div class="electro-banner-style electro-banner-position">
             <h1>Live 4K! </h1>
             <h2>up to 20% off</h2>
-            <h4>Amazon exclusives</h4>
+            <h4>Fresh Farm exclusives</h4>
             <a href="product-details.html">Buy Now→</a>
         </div>
     </div>

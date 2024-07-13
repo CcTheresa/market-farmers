@@ -41,12 +41,12 @@
                         <li><i class="pe-7s-mail"></i> <a href="#">FarmerProduce@domail.info</a></li>
                     </ul>
                 </div>
-                <div class="electronics-login-register">
+                <div class="foodproduce-login-register">
                     <ul>
                         <li><a href="#"><i class="pe-7s-users"></i>My Account</a></li>
                         <li><a data-toggle="modal" data-target="#exampleCompare" href="#"><i
                                     class="pe-7s-repeat"></i>Compare</a></li>
-                        {{-- <li><a href="wishlist.html"><i class="pe-7s-like"></i>Wishlist</a></li> --}}
+                        
 
                         @auth
                         <li>
@@ -94,7 +94,9 @@
                             <a href="#">Product <br>trace</a>
                         </div>
                     </div>
-                    <div class="categories-cart same-style">
+                    
+                    
+                <div class="categories-cart same-style">
                         <div class="same-style-icon">
                             <a href="{{ route('cart.index') }}"><i class="pe-7s-cart"></i></a>
                         </div>
@@ -194,7 +196,7 @@
                             <h3 class="footer-widget-title-3">My Account</h3>
                             <div class="footer-widget-content-3">
                                 <ul>
-                                    <li><a href="login.html">Login Hare</a></li>
+                                    <li><a href="login.html">Login Here</a></li>
                                     <li><a href="cart.html">Cart History</a></li>
                                     <li><a href="checkout.html"> Payment History</a></li>
                                     <li><a href="shop.html">Product Tracking</a></li>
@@ -317,7 +319,7 @@
                                             <a href="#">Remove <span>x</span></a>
                                             <img src="/assets/img/cart/4.jpg" alt="">
                                             <p>Cabbage </p>
-                                            <span>kss75.99</span>
+                                            <span>kshs 75.99</span>
                                             <a class="compare-btn" href="#">Add to cart</a>
                                         </th>
                                     </tr>
@@ -365,7 +367,7 @@
                                     </tr>
                                     <tr>
                                         <td class="compare-title">
-                                            <h4>brand </h4>
+                                            <h4>farm </h4>
                                         </td>
                                         
                                     </tr>
@@ -373,7 +375,7 @@
                                     <tr>
                                         <td class="compare-title"></td>
                                         <td class="compare-price compare-common">
-                                            <p>$75.99 </p>
+                                            <p>kshs 75.99 </p>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -419,10 +421,10 @@
                     </div>
                     <div class="qwick-view-right">
                         <div class="qwick-view-content">
-                            <h3>Handcrafted Supper Mug</h3>
+                            <h3>Freshly Food Produce</h3>
                             <div class="price">
-                                <span class="new">$90.00</span>
-                                <span class="old">$120.00 </span>
+                                <span class="new">kshs 90.00</span>
+                                <span class="old">kshs 120.00 </span>
                             </div>
                             <div class="rating-number">
                                 <div class="quick-view-rating">
