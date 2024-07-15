@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Http\Controllers\ChartController; // Ensure ChartController is imported
+use App\Models\VendorDemand;
 
 class AdminController extends Controller
 {
@@ -25,8 +27,24 @@ $dataPoints = [
 ];
 
 
+$totalFruits = VendorDemand::where('Product', 'Fruits')->count();
+$totalVegetables = VendorDemand::where('Product', 'Vegetables')->count();
+$totalLivestock = VendorDemand::where('Product', 'livestock')->count();
+$totalPoultry = VendorDemand::where('Product', 'poultry')->count();
+$totalDairy = VendorDemand::where('Product', 'dairy')->count();
 
-        return view('admin.admin_dashboard',compact('totalUsers','totalFarmers','totalVendors','dataPoints'));
+        $barChartData=[
+            ['Product', 'Count'],
+            ['Fruits', $totalFruits],
+            ['Vegetables', $totalVegetables],
+            ['Livestock', $totalLivestock],
+            ['Dairy', $totalDairy],
+            ['Poultry', $totalPoultry],
+     
+     
+        ];
+      
+        return view('admin.admin_dashboard',compact('totalUsers','totalFarmers','totalVendors','dataPoints','barChartData'));
     }
 
     public function users(){
@@ -71,7 +89,7 @@ $dataPoints = [
         if($photo){
 
             $photoname=time().'.'.$photo->getClientOriginalExtension();
-            $request->photo->move('user',$photoname);
+            $request->photo->move('/user_photos',$photoname);
             $data->photo=$photoname;
         }
 $data->save();

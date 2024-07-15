@@ -23,6 +23,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware(['auth'])->group(function () {
+
 //users
 Route::get('/users', [AdminController::class, 'users']);
 Route::get('/deleteuser/{id}', [AdminController::class, 'deleteuser']);
@@ -30,30 +32,44 @@ Route::get('/user/{id}', [AdminController::class, 'update']);
 Route::get('/edit_user/{id}', [AdminController::class, 'edituser']);
 Route::post('/update_user/{id}', [AdminController::class, 'updateuser']);
 Route::get('/pie', [ChartController::class, 'pieChart']);
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+});
 
 
 
 
+//profile routes
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//authentication routes
+
 require __DIR__.'/auth.php';
 
 //incase of anything remember you changed these routes
-
+Route::middleware(['auth', 'role:admin'])->group(function () {
+ 
     Route::get('admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
+});
+//Farmers routes
+    Route::middleware(['auth', 'role:farmer'])->group(function () {
+     //dashboard
+    Route::get('farmer/dashboard', [FarmerController::class, 'FarmerDashboard'])->name('farmer.dashboard');
+   //show order form
+    Route::get('farmer/orders/{id}/show', [FarmerController::class, 'showOrderForm'])->name('farmer.orders.show');
+    //accept order
+    Route::post('farmer/orders/{id}/accept', [FarmerController::class, 'acceptOrder'])->name('farmer.orders.accept');
+    });
 
 
-    Route::get('dashboard', [FarmerController::class, 'FarmerDashboard'])->name('farmer.dashboard');
+    Route::middleware(['auth', 'role:vendor'])->group(function () {
+    Route::get('vendors/dashboard', [VendorsController::class, 'VendorsDashboard'])->name('vendor.dashboard');
+    Route::post('vendors/demands', [VendorsController::class, 'store'])->name('vendor.demands.store');
+    });
 
-
-    Route::get('vendors/dashboard', [VendorController::class, 'VendorsDashboard'])->name('vendor.dashboard');
-
-
+    // Dashboard route accessible to authenticated and verified users
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');

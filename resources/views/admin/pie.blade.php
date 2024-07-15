@@ -21,6 +21,6 @@
     </script>
   </head>
   <body>
-    <div id="piechart" style="width: 450px; height: 250px;"></div>
+    <div id="piechart" style="width: 380px; height: 170px;"></div>
   </body>
 </html>

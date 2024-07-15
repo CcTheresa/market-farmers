@@ -120,9 +120,15 @@
       </li>
       <li class="nav-item nav-profile dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-          
+             <!-- Display user profile image 
+        @if(Auth::user()->photo)
+            <img src="{{ asset('user_photos/' . Auth::user()->photo) }}" alt="profile" class="nav-profile-img">
+        @else
+            <img src="{{ asset('default_photo.png') }}" alt="profile" class="nav-profile-img">
+        @endif
           <span class="nav-profile-name">{{ Auth::user()->name }}</span>
         </a>
+-->
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
           <a class="dropdown-item">
             <i class="mdi mdi-cog text-primary"></i>

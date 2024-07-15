@@ -34,9 +34,13 @@
 
 <!--pie chart-->
 <div class="row">
-  <div class="col-md-12 mb-3">
+  <div class="col-md-6 mb-3">
 @include('admin.pie')
   </div>
+</div>
 
+<!--bargraph-->
+<div class="col-md-6 mb-3">
+    @include('admin.bar')
 </div>
 @endsection

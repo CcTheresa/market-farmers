@@ -38,6 +38,13 @@
 
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
+
+         <!-- Profile Photo 
+    <div>
+        <label for="photo">{{ __('Profile Photo') }}</label>
+        <input id="photo" type="file" name="photo" accept="image/*">
+    </div>
+-->
         <!--role selection-->
         <div class="form-group row">
     <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
