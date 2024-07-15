@@ -19,6 +19,7 @@ AgriMarket Connect is a platform designed to facilitate direct interaction betwe
 
 
 ## Clone the repository
+``bash
 git clone https://github.com/yourusername/agrimarket-connect.git
 cd agrimarket-connect
 
