@@ -1,66 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## AgriMarket Connect: Enhancing Farmer Access to Market Demand and Transport Services
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Description
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+AgriMarket Connect is a platform designed to facilitate direct interaction between farmers and vendors, enhancing efficiency in the agricultural sector. Farmers can easily connect with vendors to supply their produce, while vendors can register their demand and facilitate transactions with farmers. The platform also includes an admin dashboard for managing users and providing statistical insights.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+# Dependancies
+- Laravel (PHP framework)
+- MySQL (Database)
+- Bootstrap (Frontend framework)
+- Chart.js (Data visualization)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Clone the repository
+git clone https://github.com/yourusername/agrimarket-connect.git
+cd agrimarket-connect
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#install dependancies
+-composer install
+-npm install
 
-## Laravel Sponsors
+#Set up environment
+-cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## usage
+- Open browser and navigate to : http://localhost:8000
+- register and verify email
+- log in and use dashboard
+  
+### Project Structure
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Overview
 
-## Contributing
+The project is organized following standard Laravel conventions, with key folders and their contents structured as follows:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- `app/`:
+  - Contains controllers, models, middleware, and other PHP logic.
+  - **Controllers**: Handle HTTP requests and responses.
+  - **Models**: Represent database tables and encapsulate business logic.
+  - **Middleware**: Implements HTTP middleware for request processing.
 
-## Code of Conduct
+- `database/`:
+  - Contains migrations, seeders, and database factories.
+  - **Migrations**: Define database schema changes using PHP.
+  - **Seeders**: Populate the database with initial data for testing and development.
+  - **Factories**: Define blueprints for generating fake data during testing.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- `resources/`:
+  - Contains assets and views used by the frontend.
+  - **views/**: Blade templates for HTML rendering.
+  - **assets/**: CSS stylesheets, JavaScript files, and image assets.
+
+- `routes/`:
+  - Contains route definitions for the application.
+  - **web.php**: Defines web routes for handling HTTP requests.
+  - **api.php**: Defines API routes for serving JSON responses.
+
+- `public/`:
+  - Contains publicly accessible files such as index.php, images, and compiled assets.
+
+- `tests/`:
+  - Contains automated tests for the application.
+  - **Feature/**: Tests that simulate user actions.
+  - **Unit/**: Tests that isolate and validate individual units of code.
+
+## Key Files
+
+- `.env`: Configuration file for environment variables such as database credentials and application settings.
+- `composer.json`: Defines PHP dependencies and scripts managed by Composer.
+- `package.json`: Defines JavaScript dependencies and build scripts managed by npm.
+- `artisan`: Laravel's command-line utility for executing commands such as running migrations, serving the application, and clearing caches.
+
+The project adheres to Laravel's MVC (Model-View-Controller) architecture, promoting separation of concerns and maintainability. Custom folders and files may be added based on specific project requirements, but the above structure provides a solid foundation for developing and deploying your application.
+
+
 
 ## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- prone to SQL injections
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is licensed under the [MIT license](https://opensource.org/licenses/MIT).
