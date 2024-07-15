@@ -19,15 +19,15 @@ AgriMarket Connect is a platform designed to facilitate direct interaction betwe
 
 
 ## Clone the repository
-``bash
+```bash
 git clone https://github.com/yourusername/agrimarket-connect.git
 cd agrimarket-connect
 
-#install dependancies
+###install dependancies
 -composer install
 -npm install
 
-#Set up environment
+###Set up environment
 -cp .env.example .env
 php artisan key:generate
 php artisan migrate --seed
