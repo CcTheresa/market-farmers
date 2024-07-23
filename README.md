@@ -19,19 +19,27 @@ AgriMarket Connect is a platform designed to facilitate direct interaction betwe
 
 
 ## Clone the repository
+
+```bash
 git clone https://github.com/yourusername/agrimarket-connect.git
 cd agrimarket-connect
-
-#install dependancies
+```
+###install dependancies
+```bash
 -composer install
+```
+```bash
 -npm install
-
-#Set up environment
+```
+###Set up environment
+```bash
 -cp .env.example .env
+```
+```bash
 php artisan key:generate
 php artisan migrate --seed
 php artisan serve
-
+```
 ## usage
 - Open browser and navigate to : http://localhost:8000
 - register and verify email
